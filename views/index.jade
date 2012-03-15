@@ -1,0 +1,41 @@
+!!! 5
+html
+head
+    meta(http-equiv='Content-type', content='text/html; charset=utf-8')
+    title Real-Time Hazard Console
+    script(src='/socket.io/socket.io.js')
+    link(href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow', rel='stylesheet', type='text/css')
+    link(href='css/app.css', rel='stylesheet', type='text/css')  
+    script(src='js/app.js', type='text/javascript')  
+    script(type='text/javascript')
+      $(function () {
+      Map.Controller.init();
+      });
+    header
+      div#titles
+        h1 Real-Time Hazards Console
+        h4#subtitle.clear NodeJs + Socket.io
+            span#userCount Current Users: 1
+      div#tools
+         ul#drawing
+            li(data-type='fire')
+                img(src='/images/fire.png')
+            li(data-type='deaths')
+                img(src='/images/deaths.png')
+            li(data-type='road-damage')
+                img(src='/images/road-damage.png') 
+            li(data-type='road-impassable') 
+                img(src='/images/road-impassable.png')
+            li(data-type='damaged-building') 
+                img(src='/images/damaged-building.png')
+            li(data-type='destroyed-building') 
+                img(src='/images/destroyed-building.png')
+          h4#message
+      div.clear        
+    div#map
+    section
+      div.summary
+        h4#current 
+        a#toggle-drive.button(href='#') Drive Map
+        
+       
